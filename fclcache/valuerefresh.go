@@ -60,7 +60,7 @@ func (r *ValueRefresh[T]) GetWhatever() (T, error) {
 
 type ValueCacheCommon interface {
 	Ready() bool
-	Refresh()
+	Refresh(ctx context.Context)
 	LastRefresh() time.Time
 }
 
